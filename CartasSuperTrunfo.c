@@ -154,7 +154,7 @@ int main() {
     // Super Poder: Maior valor vence
     printf("Super Poder: Carta %d venceu (%d)\n",
            (super_poder_carta1 > super_poder_carta2 ? 1 : 2),
-           (super_poder_carta1 > super_poder_2 ? 1 : 0));
+           (super_poder_carta1 > super_poder_carta2 ? 1 : 0));
 
     return 0; // Indica que o programa foi executado com sucesso
 }
