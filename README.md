@@ -1,94 +1,92 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas - Atualizado: 21/02
+# Super Trunfo: Batalha de Países! - Atualizado: 31/05/2025
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+Olá, entusiasta de jogos! Prepare-se para mergulhar no mundo do **Super Trunfo: Batalha de Países**, um jogo onde o conhecimento geográfico e a estratégia se encontram! Este projeto é a base de um emocionante jogo de cartas digital, desenvolvido em C, onde você pode comparar o poder de diferentes nações com base em seus atributos.
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+Este sistema foi construído em etapas, desde o simples cadastro de cartas até uma batalha interativa e cheia de estratégia. Ele representa o culminar de três níveis de desafio: Novato, Aventureiro e Mestre.
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior.  **Você deve escolher qual desafio quer realizar.**
+---
 
-🚨 **Atenção:** O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções `scanf` para ler os dados e `printf` para exibi-los.
+## 🌎 O que o Jogo Faz?
 
-## 🎮 Nível Novato: Cadastro Básico
+No Super Trunfo: Batalha de Países, você terá duas cartas de países prontas para a batalha. O grande diferencial é que **você decide quais atributos serão usados para determinar o vencedor!**
 
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades.  Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).
+**Como funciona a Batalha:**
 
-🚩 **Objetivo:** Criar um programa em C que cadastra **duas** cartas com os seguintes atributos:
+1.  **Conheça os Combatentes:** Ao iniciar o jogo, você verá as informações completas das duas cartas de países que se enfrentarão. Cada carta possui dados como:
+    * **Nome do País:** (Ex: "Estados Unidos", "Brasil")
+    * **População:** O número de habitantes.
+    * **Área (em km²):** A extensão territorial.
+    * **PIB (Produto Interno Bruto):** A riqueza gerada pelo país (em trilhões de dólares).
+    * **Pontos Turísticos:** Um indicador da atratividade turística.
+    * **Densidade Demográfica:** Calculada automaticamente (População / Área).
+    * **PIB per Capita:** Calculado automaticamente (PIB Total / População).
 
-*   População (`int`)
-*   Área (`float`)
-*   PIB (`float`)
-*   Número de pontos turísticos (`int`)
+2.  **Sua Estratégia de Escolha:** O jogo irá apresentar um menu interativo e inteligente. Nele, você poderá **escolher dois atributos diferentes** para comparar as cartas. O menu é "dinâmico", ou seja, o atributo que você escolher primeiro não aparecerá como opção para a segunda escolha, garantindo uma jogada justa!
 
-⚙️ **Funcionalidades do Sistema:**
+3.  **As Regras da Batalha:**
+    * **A Maioria Vence, Quase Sempre:** Para a maioria dos atributos (População, Área, PIB, Pontos Turísticos, PIB per Capita), a carta com o **maior valor** no atributo escolhido ganha o ponto.
+    * **A Exceção da Densidade:** Cuidado! Para a **Densidade Demográfica**, a regra é invertida: a carta com o **menor valor** é a vencedora!
+    * **Empate? Sem Problemas!** Se os valores forem iguais em um atributo, nenhum país ganha ponto naquele atributo.
 
-*   O sistema permitirá ao usuário cadastrar os dados de **duas** cartas manualmente via terminal.
-*   Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
+4.  **A Pontuação Final:** Após a comparação dos dois atributos que você escolheu, o sistema soma os "pontos de vitória" de cada carta (1 ponto por atributo vencido).
+    * A carta com a **maior soma de pontos** é declarada a vencedora da rodada!
+    * Se a soma de pontos for igual para ambos os países, o resultado é um emocionante **"Empate!"**.
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+5.  **Resultado Claro e Detalhado:** Ao final da rodada, o jogo exibe de forma organizada:
+    * Os nomes dos países.
+    * Os dois atributos que você escolheu para a comparação, com os valores de cada país.
+    * A soma total dos pontos de cada país.
+    * E, claro, o veredito final: qual país venceu a batalha ou se foi um empate!
 
-*   O usuário insere os dados de cada carta interativamente via `scanf`.
-*   O programa exibe os dados cadastrados usando `printf`, com cada atributo em uma nova linha.
+---
 
-**Simplificações para o Nível Novato:**
+## 🛠️ Como Baixar e Testar o Jogo
 
-*   Cadastre apenas **duas** cartas.
-*   Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-*   **Não use** laços (`for`, `while`) ou condicionais (`if`, `else`).
+Quer colocar as mãos na massa e ver o Super Trunfo: Batalha de Países em ação? Siga estes passos simples:
 
+1.  **Faça o Download do Jogo:**
+    * Abra seu **terminal** (ou Prompt de Comando/PowerShell no Windows).
+    * Use o comando `git clone` para baixar todo o projeto para o seu computador:
+        ```bash
+        git clone [https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO.git)
+        ```
+        (Substitua `https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO.git` pelo **link real do seu repositório GitHub**.)
+    * Acesse a pasta do projeto:
+        ```bash
+        cd SEU_REPOSITORIO
+        ```
+        (Substitua `SEU_REPOSITORIO` pelo nome da pasta que foi criada, geralmente o nome do seu repositório.)
 
-## 🛡️ Nível Aventureiro: Cálculo de Atributos
+2.  **Prepare-se para a Batalha (Compilação):**
+    * Para que o seu computador entenda o código em C, precisamos compilá-lo. Certifique-se de ter um **compilador C** (como o GCC, que é bem comum e gratuito) instalado no seu sistema.
+    * No terminal, digite o seguinte comando para compilar o jogo:
+        ```bash
+        gcc super_trunfo.c -o super_trunfo
+        ```
+        *O que isso faz?* Ele pega o arquivo `super_trunfo.c` (seu código fonte) e o transforma em um programa executável chamado `super_trunfo`.
 
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
+3.  **Hora de Jogar! (Execução):**
+    * Com o programa compilado, você já pode iniciar a batalha! Digite no terminal:
+        ```bash
+        ./super_trunfo
+        ```
+        *E pronto!* O jogo começará, exibindo as informações das cartas e pedindo para você fazer suas escolhas.
 
-🆕 **Diferença em relação ao Nível Novato:**
+---
 
-*   **Novos Atributos:**
-    *   Densidade Populacional: População / Área (`float`)
-    *   PIB per Capita: PIB / População (`float`)
+## 📈 A Jornada de Desenvolvimento (Para os Curiosos!)
 
-⚙️ **Funcionalidades do Sistema:**
+Este projeto foi construído incrementalmente, o que significa que funcionalidades foram adicionadas em etapas, tornando o código mais robusto e completo a cada fase.
 
-*   O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-*   Os novos atributos serão exibidos junto com os demais.
+* **Nível Novato (Cadastro Básico):** O ponto de partida! Aqui, o foco foi aprender a receber e exibir dados de cartas. Sem complicações, apenas o essencial.
+* **Nível Aventureiro (Cálculo de Atributos e Comparação Simples):** O jogo ganhou vida com cálculos de densidade e PIB per capita. Introduzimos a primeira lógica de comparação, onde o computador decide qual atributo comparar.
+* **Nível Mestre (Interatividade e Comparações Avançadas):** O nível que você está vendo agora! Aqui, o jogador assume o controle, escolhendo atributos dinamicamente, e a lógica de vitória se torna mais sofisticada, com um sistema de pontuação por atributos.
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+---
 
-*   Mesma entrada do nível Novato.
-*   A saída exibirá também os atributos calculados.
+Sinta-se à vontade para explorar o código (`super_trunfo.c`) e ver como cada parte foi construída. Ele está bem comentado para facilitar o entendimento.
 
-**Simplificações para o Nível Intermediário:**
+Divirta-se na Batalha de Países!
 
-*   Continue cadastrando apenas **duas** cartas.
-*   Continue **sem usar** laços (`for`, `while`) ou condicionais (`if`, `else`).
-
-
-
-## 🏆 Nível Mestre: Comparação e Super Poder
-
-No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
-
-🆕 **Diferença em relação ao Nível Aventureiro:**
-
-*   **Comparação de Cartas:** O usuário poderá comparar as duas cartas.
-*   **Super Poder:** Soma de todos os atributos (inclusive os calculados), com a densidade populacional *invertida* antes da soma (1/densidade).  Tipo: `float`.
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
-*   Para Densidade Populacional, vence a carta com o *menor* valor.
-*   Para os demais atributos (e o Super Poder), vence a carta com o *maior* valor.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   Mesma entrada dos níveis anteriores, mas a População agora é `unsigned long int`.
-*   A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
-
-**Observação:**  Preste atenção à conversão de tipos ao calcular o Super Poder!
-
-
-## 🏁 Conclusão
-
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
-
-Equipe de Ensino - MateCheck
-content_copy
+Atenciosamente, 
+**Rafael Martinano (Aluno de Gestão em Tecnologia da Informação - Faculdade Estácio)**
